@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        
+        <div class="show-form-btn" id="show-form-btn"><img src="./imgs/plus.svg" alt="add new book"></div>
+        
+        <div class="header">
+            <img src="./imgs/book.png" alt="book image">
+            <h1>My Library</h1>    
+        </div>
+
+        <div class="content" id="content">
+        </div>
+
+        <div class="footer">
+            <span>&copy Copyright by my Face</span>
+        </div>
+    </div>
+
+    <div class="new-book-section hide" id="new-book-section">
+
+        <div class="new-book-form">
+            <form class="add-book" id="add-book-form">
+                <h3>Add Book</h3>
+
+                <input type="text" id="title-input" name="title" placeholder="Title">
+
+                <input type="text" id="author-input" name="author" placeholder="Author">
+
+                <input type="number" id="pages-input" name="pages" placeholder="Number">
+
+                <div class="radio-section">
+                    <label for="is-read">Have you read this book?</label>
+                    <input type="checkbox" id="is-read-input" name="is-read">
+                </div>
+
+                <div class="button-section">
+                    <button type="button" id="submit-book-btn">Add Book</button>
+                    <button type="button" id="cancel-book-btn">Cancel</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
