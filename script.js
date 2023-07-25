@@ -2,24 +2,26 @@ let myLibrary = [];
 const bookshelf = document.getElementById("content");
 const newBookSection = document.getElementById("new-book-section");
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 
-//changes book from read to unread or vice versa
-Book.prototype.changeReadStatus = function (readElement) {
-    this.read = !this.read;
-    readElement.classList.toggle("read");
-}
+    //changes book from read to unread or vice versa
+    changeReadStatus(readElement) {
+        this.read = !this.read;
+        readElement.classList.toggle("read");
+    }
 
+    //removes book from myLibrary array
+    removeBook() {
+        const bookIndex = myLibrary.findIndex((book) => book.title === this.title);
+        myLibrary.splice(bookIndex, 1);
+    }
 
-//removes book from myLibrary array
-Book.prototype.removeBook = function () {
-    bookIndex = myLibrary.findIndex((book) => book.title === this.title);
-    myLibrary.splice(bookIndex, 1);
 }
 
 //creates a new book object and displays in DOM
